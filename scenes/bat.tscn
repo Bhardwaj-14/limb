@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://cnemqtwkuxiru"]
+
+[ext_resource type="Script" uid="uid://bud0ffit6vr63" path="res://scripts/bat.gd" id="1_cnldk"]
+[ext_resource type="Texture2D" uid="uid://cfe72wg6moulx" path="res://assets/Characters/bat.png" id="1_uhqni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnldk"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48wkk"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss3tx"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv0ya"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fn3r"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qtcx"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4bhu"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0o7o"]
+atlas = ExtResource("1_uhqni")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67y1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnldk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48wkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss3tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv0ya")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fn3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qtcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4bhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0o7o")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5otw"]
+radius = 4.0
+height = 14.0
+
+[node name="Bat" type="CharacterBody2D"]
+z_index = 10
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_cnldk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_67y1s")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.55326223
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_p5otw")
