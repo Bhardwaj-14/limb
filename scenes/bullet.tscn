@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://163bs8cuo8he"]
+[gd_scene load_steps=4 format=3 uid="uid://beorblh7fjxxe"]
 
-[ext_resource type="Script" uid="uid://c5bpccn5wiapb" path="res://scripts/bullet.gd" id="1_y25gk"]
+[ext_resource type="Script" uid="uid://wjl6qogdnj66" path="res://scripts/bullet.gd" id="1_y25gk"]
 [ext_resource type="Texture2D" uid="uid://c70i125w4kphk" path="res://assets/Other/bullet.png" id="2_l5glv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eoqba"]
 radius = 1.0
-height = 4.0
+height = 6.0
 
 [node name="Bullet" type="Area2D"]
 top_level = true
@@ -19,7 +19,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_eoqba")
 
 [node name="Bullet" type="Sprite2D" parent="."]
-scale = Vector2(0.18382354, 0.19852942)
+scale = Vector2(0.26838237, 0.2757353)
 texture = ExtResource("2_l5glv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
