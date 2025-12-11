@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc5xkmbewyq24"
+path="res://.godot/imported/Overworld Theme - Super Mario_ World.mp3-1a4cde97f468d222c805d98d2b98860f.mp3str"
+
+[deps]
+
+source_file="res://assets/Overworld Theme - Super Mario_ World.mp3"
+dest_files=["res://.godot/imported/Overworld Theme - Super Mario_ World.mp3-1a4cde97f468d222c805d98d2b98860f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
